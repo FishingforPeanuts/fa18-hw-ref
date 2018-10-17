@@ -13,7 +13,11 @@ most_common_char
 Given an input string s, return the most common character in s.
 """
 def most_common_char(s):
-	pass
+        alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        num_chars = [0] * len(alphabet)
+        for char in s:
+                num_chars[alphabet.find(char)] += 1
+        return alphabet[num_chars.index(max(num_chars))]
 
 
 """
